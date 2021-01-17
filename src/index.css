@@ -1,0 +1,474 @@
+/*
+  GENERAL
+  *******************************************
+*/
+
+html {
+  background: #2196f3;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f44336, #2196f3);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f44336, #2196f3);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+body {
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.3rem;
+}
+
+.content {
+  padding: 0 60px 60px 60px;
+}
+
+/* 
+  NAVBAR 
+  *******************************************
+*/
+
+.link {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+/* 
+  BUTTONS 
+  *******************************************
+*/
+
+.btn-primary {
+  color: whitesmoke;
+  cursor: pointer;
+  border: 2px solid #2196f3;
+  border-radius: 6px;
+  background-color: transparent;
+  font-size: 1.5rem;
+  padding: 10px;
+  transition-duration: 0.4s;
+}
+
+.btn-primary:hover {
+  background-color: #2196f3;
+}
+
+.btn-primary:focus {
+  outline: none;
+}
+
+.btn-success {
+  color: whitesmoke;
+  cursor: pointer;
+  border: 2px solid #f0ad4e;
+  border-radius: 6px;
+  background-color: transparent;
+  font-size: 1.5rem;
+  padding: 10px;
+  transition-duration: 0.4s;
+  width: 100%;
+}
+
+.btn-success:hover {
+  background-color: #f0ad4e;
+}
+
+.btn-success:focus {
+  outline: none;
+}
+
+.btn-danger {
+  background-color: transparent;
+  border: 2px solid#d9534f;
+  border-radius: 6px;
+  color: whitesmoke;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  padding: 10px;
+  transition-duration: 0.4s;
+  width: 100%;
+}
+
+.btn-danger:hover {
+  background-color: #d9534f;
+}
+
+.btn-danger:focus {
+  outline: none;
+}
+
+/*
+  LIST HEROES
+  *******************************************
+*/
+
+.heroes-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/*
+  CARDS
+  *******************************************
+*/
+
+.body-cards {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  justify-content: space-around;
+}
+
+.card {
+  min-width: 260px;
+  width: 280px;
+  height: 360px;
+  border-radius: 10px;
+  padding: 2rem 1rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: #fff;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+  transition: 0.5s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(20px);
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  display: block;
+  width:100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,176,155,0.5), rgba(150,201,61,1));
+  z-index: 2;
+  transition:0.5s all;
+  opacity: 0;
+}
+
+.card:hover:before {
+  opacity: 1;
+}
+
+ .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card .info {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(30px);
+  transition:0.5s all;
+  width: 100%;
+}  
+.card:hover .info {
+  opacity: 1;
+  z-index: 2;
+  transform: translateY(0px);
+} 
+
+.card .info p {
+  letter-spacing: 1px;
+}
+/*
+  DETAIL
+  *******************************************
+*/
+
+.div-img-detail {
+  border: 1px solid black;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 8px;
+  height: 600px;
+  margin-top: 10px;
+  overflow: hidden;
+  width: 350px;
+  min-width: 280px;
+}
+
+.img-detail {
+  height: 600px;
+  width: 350px;
+  min-width: 270px;
+  object-fit: cover;
+}
+
+.detail-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.logo-marvel {
+  height: 40px;
+  width: 100px;
+}
+
+.logo-dc {
+  height: 70px;
+}
+
+/*
+  INPUTS
+  *******************************************
+*/
+
+.input-form {
+  color: rgb(63, 62, 62);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  padding: 10px;
+  width: 80%;
+}
+
+.input-form:focus {
+  outline: none;
+  border: 2px solid #2196f3;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+}
+
+/* NAVBAR
+******************************************************************/
+
+header {
+  background: #2196f3;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f44336, #2196f3);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f44336, #2196f3);
+  color: whitesmoke;
+  padding: 1em 0;
+  position: relative;
+}
+
+header::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+/* DIV LOGO */
+
+.container {
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* LOGO */
+
+.logo {
+  float: left;
+  font-size: 1rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+
+
+/* NAVBAR (MENU MOBILE) 
+***********************************************/
+
+/* Color del Menu Mobile, alineación arriba y a la derecha */
+
+.site-nav {
+  background-color: #57578b;
+  top: 100%;
+  right: 0;
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  clip-path: circle(0px at top right);
+  transition: clip-path ease-in-out 700ms; 
+}
+
+/* CLASE QUE CREO EN JS - Muestra el menu */
+
+.site-nav-open {
+  height: auto;
+  clip-path: circle(150% at top right);
+  z-index: 3;
+  position: absolute;
+  border-radius: 10px;
+}
+
+/* Modificación de la lista */
+
+.site-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Borde inferior en cada uno de los elementos de la lista */
+
+.site-nav li {
+  border-bottom: 1px solid black;
+}
+
+.site-nav li:last-child {
+  border-bottom: none;
+}
+
+/* Color de los elementos, ancho/alto de cada uno de ellos,
+ texto a mayúsculas y sin subrayado. 
+*/
+
+.site-nav span {
+  color: whitesmoke;
+  display: block;
+  padding: 1em 3em;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* Cambia el color del hover y focus */
+
+.site-nav span:hover, .site-nav span:focus {
+  background-color: #e4b363;
+  color: #464655;
+}
+
+/* TOGGLE BUTTON (MENU MOBILE) 
+********************************/
+
+/* Posiciono el simbolo del menu toggle en la parte superior derecha */
+
+.menu-toggle {
+  /*     background-color: red; */
+  padding: 1em;
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+}
+
+/* CREO LA ANIMACIÓN AL ABRIR EL MENÚ */
+
+.menu-open .hamburger {
+  transform: rotate(45deg);
+}
+
+.menu-open .hamburger::before {
+  opacity: 0;
+}
+
+.menu-open .hamburger::after {
+  transform: translateY(-3px) rotate(-90deg);
+}
+
+/* Aquí es donde creo las 3 líneas del menu desplegable */
+
+.hamburger, .hamburger::after, .hamburger::before {
+  content: '';
+  display: block;
+  background-color: #ebebd3;
+  height: 3px;
+  width: 1.75em;
+  border-radius: 3px;
+}
+
+/* Creo la separación en el eje (Y) */
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+/* NAVBAR (DESKTOP) 
+******************************************************************************************/
+
+/* Asigno el punto de ruptura a los 700px */
+
+@media (min-width: 700px) {
+  /* Quito el menu desplegable */
+  .menu-toggle {
+    display: none;
+  }
+  /* Modifico navbar */
+  .site-nav {
+    height: auto;
+    position: relative;
+    background-color: transparent;
+    float: right;
+    margin-right: 10px;
+    clip-path: initial;
+  }
+  /* Alineo los elementos del nav y quito bordes */
+  .site-nav li {
+    display: inline-block;
+    border: none;
+  }
+  /* Quito el grosor y doy margen a los elementos */
+  .site-nav span {
+    padding: 0px;
+    margin-left: 3em;
+    margin-right: 3em;
+  }
+  .site-nav span:hover, .site-nav span:focus {
+    background-color: transparent;
+  }
+}
+
+/* FADE IN ANIMATION
+**********************************/
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fast {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
